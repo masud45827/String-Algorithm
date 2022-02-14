@@ -46,7 +46,7 @@ ll bigmod ( ll a, ll p, ll m)
 }
 ll get_hash(ll l, ll r) {
 	ll has = hash1[r];
-	 if(l>0) has=(has-hash1[l-1]);
+	 if(l>0) has=(has+mod-hash1[l-1])%mod;
 	has=(has*inv[l])%mod;
 	return has;
 }
